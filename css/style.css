@@ -1,0 +1,497 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+:root {
+    --main-color: #edf1fd;
+    --black-color: #3e4454;
+    --red-color: #fc033d;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+@font-face {
+    font-family: 'Nice Font';
+    src: url(../assets/fonts/Trueno-FontZillion/Fonts/truenobd.otf);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Nice Font', sans-serif;
+    color: var(--black-color);
+}
+
+section {
+    min-height: 100vh;
+    padding: 100px 0;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+.section-title {
+    position: relative;
+    padding-left: 30px;
+}
+
+.section-title::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 20px;
+    height: 2px;
+    background: #000;
+}
+
+.font-30 {
+    font-size: 30px;
+}
+
+.btn {
+    border: 1px solid;
+    border-radius: 3px;
+    padding: 7px 25px;
+    font-size: 16px;
+}
+
+.btn-red {
+    background-color: var(--red-color);
+    color: #fff;
+    border-color: var(--red-color);
+}
+
+.btn-dark {
+    background-color: var(--black-color);
+    color: #fff;
+    border-color: var(--black-color);
+}
+
+.bg-main {
+    background-color: var(--main-color);
+}
+
+.d-flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.jc-sp-btw {
+    justify-content: space-between;
+}
+
+
+/* ------------------------------------ */
+
+
+/*                 HEADR                */
+
+
+/* ------------------------------------ */
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 50px;
+    width: 100%;
+    z-index: 999;
+    background: var(--main-color);
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 50px;
+}
+
+nav a {
+    text-decoration: none;
+}
+
+#logo img {
+    height: 30px;
+    vertical-align: middle;
+}
+
+#nav-links a {
+    margin: 0 5px;
+}
+
+#burger-menu {
+    display: none;
+    font-size: 23px;
+}
+
+
+/* -------------------------------------- */
+
+
+/* ----------   HOME SECTION   ---------- */
+
+
+/* -------------------------------------- */
+
+#home .container {
+    display: flex;
+    position: relative;
+    align-items: flex-end;
+}
+
+#home .container>div {
+    flex: 1;
+}
+
+#home .container #home-info,
+#home .container #home-img {
+    flex: 3;
+}
+
+#home .container #home-info {
+    align-self: center;
+}
+
+#home .container #home-img {
+    background: url(../img/home/bg.svg) center no-repeat;
+    background-size: cover;
+}
+
+#home-scroll {
+    position: absolute;
+    right: -30px;
+    bottom: 20px;
+    flex-grow: 0;
+    transform: rotate(90deg);
+}
+
+#home h1 span {
+    color: var(--red-color);
+}
+
+#home img {
+    width: 90%;
+}
+
+#home button {
+    background-color: var(--red-color);
+    padding: 5px 10px;
+    color: #fff;
+    border: 1px solid var(--red-color);
+    text-transform: uppercase;
+    font-size: 14px;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+}
+
+
+/* ------------------------------------------- */
+
+
+/* --------------  ABOUT   ------------------ */
+
+#about .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+.left-side {
+    width: 45%;
+}
+
+.left-side img {
+    width: 100%;
+    max-width: 400px;
+}
+
+.right-side {
+    width: 55%;
+}
+
+#about p {
+    line-height: 1.4;
+}
+
+#sign {
+    font-family: 'Rouge Script', cursive;
+    font-size: 40px;
+    margin-bottom: 30px;
+}
+
+#my-skills h3 {
+    transform: rotate(-90deg);
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+}
+
+#my-skills ul {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+    flex: 1;
+}
+
+#my-skills li {
+    width: 45%;
+}
+
+#my-skills progress {
+    width: 100%;
+    height: 30px;
+}
+
+#my-skills p {
+    position: relative;
+}
+
+#my-skills p span {
+    position: absolute;
+    right: 0;
+}
+
+.progress-wrapper {
+    width: 100%;
+    background-color: #eee;
+    height: 10px;
+    border-radius: 10px;
+}
+
+.progress-value {
+    background-color: var(--black-color);
+    height: 10px;
+    border-radius: 10px;
+}
+
+
+/* -------------- SERVICES ---------------- */
+
+#services {
+    text-align: center;
+}
+
+#services ul {
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    list-style: none;
+}
+
+#services li {
+    margin: 10px;
+    padding: 20px;
+    flex: 1;
+    box-shadow: 0px 0px 1px #134064, 0px 0px 1px #134064;
+    border-radius: 1px;
+    transition: .5s;
+    cursor: pointer;
+}
+
+#services li i {
+    font-size: 34px;
+    color: #134064;
+}
+
+#services li:hover {
+    margin: 10px;
+    flex: 1;
+    box-shadow: -2px -2px 10px #13406442, 2px 2px 10px #13406436;
+    border-radius: 1px;
+    transition: .5s;
+}
+
+#services li:hover i {
+    color: var(--red-color);
+}
+
+
+/* -------------- PROJECTS ------------ */
+
+#projects {
+    text-align: center;
+}
+
+#projects a {
+    text-decoration: none;
+    margin: 0 10px;
+    color: var(--black-color);
+}
+
+#projects a:hover {
+    border-bottom: 6px dotted;
+}
+
+#projects li {
+    width: 33%;
+    list-style: none;
+}
+
+#projects li img {
+    width: 100%;
+}
+
+#projects li div {
+    padding: 20px;
+    list-style: none;
+}
+
+@media (max-width: 991px) {
+    #home .container {}
+}
+
+@media (max-width: 768px) {
+    #nav-links {
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        background-color: var(--black-color);
+        width: 200px;
+        right: 0;
+        top: 50px;
+        z-index: 9999;
+        height: 100%;
+        z-index: 1;
+        transition: 1s;
+        transform: translateX(100%);
+    }
+    #nav-links a {
+        color: #fff;
+        margin: 2px 0;
+        width: 100%;
+        padding: 6px 10px;
+        transition: .6s;
+    }
+    #nav-links a:hover {
+        background-color: var(--red-color);
+        transition: .6s;
+    }
+    #nav-links::before {
+        content: '';
+        top: 0;
+        bottom: 0;
+        background: #3e4454b8;
+        height: 100%;
+        right: 100%;
+        position: absolute;
+        z-index: -1;
+        transition: 1s;
+    }
+    #burger-menu {
+        display: block;
+        color: var(--black-color);
+        order: 2;
+    }
+    #burger-menu:hover~#nav-links,
+    #nav-links:hover {
+        transform: translateX(0%);
+        transition: 1s;
+    }
+    #burger-menu:hover~#nav-links::before {
+        transition: 2s;
+        /* width: calc(100vw - 200px); */
+        -webkit-transition: 2s;
+        -moz-transition: 2s;
+        -ms-transition: 2s;
+        -o-transition: 2s;
+    }
+    #home .container {
+        flex-direction: column;
+        align-items: center;
+    }
+    #home .container #home-img {
+        order: -1;
+        width: 90%;
+        max-width: 400px;
+        margin: auto;
+    }
+    #home .container>div:first-of-type {
+        order: 1;
+        margin-top: 30px;
+    }
+    #home .container>div:first-of-type a {
+        font-size: 20px;
+        margin: 0 5px;
+        color: #81859e;
+    }
+    #home .container #home-info {
+        width: 90%;
+        max-width: 400px;
+        margin: auto;
+        text-align: center;
+        margin-top: 30px;
+    }
+    #home-info .section-title,
+    #home-scroll {
+        display: none;
+    }
+    /* ------------- About ------------- */
+    #about .container {
+        flex-direction: column;
+    }
+    #sign+div {
+        text-align: center;
+    }
+    .left-side,
+    .right-side {
+        width: 90%;
+        max-width: 400px;
+    }
+    #my-skills {
+        flex-direction: column;
+    }
+    #my-skills h3 {
+        transform: rotate(0);
+    }
+    #my-skills ul {
+        flex-direction: column;
+        width: 90%;
+        max-width: 400px;
+    }
+    #my-skills li {
+        width: 100%;
+    }
+    /* ------ Services ------- */
+    #services ul {
+        flex-direction: column;
+    }
+    #services li {
+        width: 90%;
+        max-width: 400px;
+        margin: 10px auto;
+    }
+    #services li:hover {
+        margin: 10px auto;
+    }
+    /* ------- PROJECTS ----- */
+    #projects .d-flex {
+        flex-direction: column;
+    }
+    #projects .d-flex li {
+        width: 90%;
+        max-width: 400px;
+    }
+}
